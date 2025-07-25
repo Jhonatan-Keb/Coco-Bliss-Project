@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTM - Coco Bliss Exfoliante</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER FIJO -->
+  <header class="header">
+    <div class="logo">UTM</div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <nav class="side-menu" id="side-menu">
+      <button class="close-menu" id="close-menu" aria-label="Cerrar menú">&times;</button>
+      <div class="menu-item">
+        <label class="theme-toggle">
+          <span>Modo Oscuro</span>
+          <div class="switch">
+            <input type="checkbox" id="theme-toggle" aria-label="Alternar modo oscuro" />
+            <span class="slider"></span>
+          </div>
+        </label>
+      </div>
+      <div class="menu-item">
+        <button class="about-btn" id="about-btn">Acerca de esta página</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MODAL GENERAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+      <button class="modal-close" id="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h2 id="modal-title">Acerca de esta página</h2>
+      <div id="modal-desc">
+        <p>Esta página web presenta información sobre el exfoliante <strong>Coco Bliss</strong> desarrollado por un equipo de la <strong>UTM</strong> (Universidad Tecnológica Metropolitana).</p>
+        <h3>Coco Bliss</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALES INGREDIENTES -->
+  <div class="modal-overlay" id="modal-azucar">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-azucar-title" aria-describedby="modal-azucar-desc">
+      <button class="modal-close" onclick="closeModal('modal-azucar')" aria-label="Cerrar modal azúcar">&times;</button>
+      <h3 id="modal-azucar-title">Azúcar</h3>
+      <p id="modal-azucar-desc">El azúcar es un excelente exfoliante natural que ayuda a eliminar las células muertas de la piel, dejándola suave y radiante. También mejora la textura de la piel, reduciendo rugosidades.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-coco">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-coco-title" aria-describedby="modal-coco-desc">
+      <button class="modal-close" onclick="closeModal('modal-coco')" aria-label="Cerrar modal aceite de coco">&times;</button>
+      <h3 id="modal-coco-title">Aceite de Coco</h3>
+      <p id="modal-coco-desc">Hidrata y nutre la piel, la deja suave y tiene propiedades antibacterianas para proteger contra irritaciones.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-crema">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-crema-title" aria-describedby="modal-crema-desc">
+      <button class="modal-close" onclick="closeModal('modal-crema')" aria-label="Cerrar modal crema">&times;</button>
+      <h3 id="modal-crema-title">Crema</h3>
+      <p id="modal-crema-desc">La crema aporta hidratación adicional y ayuda a mantener la piel flexible y protegida del ambiente.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-jabon">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jabon-title" aria-describedby="modal-jabon-desc">
+      <button class="modal-close" onclick="closeModal('modal-jabon')" aria-label="Cerrar modal jabón">&times;</button>
+      <h3 id="modal-jabon-title">Jabón</h3>
+      <p id="modal-jabon-desc">Ayuda a limpiar la piel eliminando suciedad y residuos que obstruyen los poros.</p>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- SECCIÓN: DESCRIPCIÓN DEL PRODUCTO -->
+    <section class="section" id="descripcion">
+      <h2>Coco Bliss</h2>
+      <div class="content-placeholder">
+        <p>El exfoliante de manos <strong>Coco Bliss</strong> ayuda a eliminar las células muertas de la piel de las manos, dejándolas 
+suaves y radiantes, protegiéndola de la resequedad y la aspereza. Ayuda a mejorar la elasticidad de la 
+piel de las manos, reduciendo la aparición de arrugas y líneas finas, así mejorando la firmeza y 
+tonificación de la piel. Su preparación casera evita el uso de químicos agresivos, ofreciendo una opción 
+más segura y amigable.
+      </div>
+    </section>
+
+<!-- SECCIÓN: USOS DEL PRODUCTO -->
+<section class="section" id="usos">
+  <h2>Usos</h2>
+  <div class="content-placeholder">
+    <p>El Exfoliante se utiliza para remover las células muertas en su uso, al exfoliar, eliminas esa capa 
+de la piel opaca y áspera, revelando en la piel más fresca y luminosa debajo. Después de exfoliar tus 
+manos sentirás mucho más suave y tersas al tacto. Mejorando la apariencia de las manos viéndose más 
+saludables y cuidadas.
+Puedes usar este exfoliante una o tres veces por semana dependiendo de la sensibilidad de la piel,
+es recomendable no exfoliar en exceso ya que esto puede irritarla.</p>
+    <center>
+      <button class="about-btn" onclick="openIngredientModal('modal-video')" aria-haspopup="dialog" aria-controls="modal-video">Ver uso</button>
+    </center>
+  </div>
+</section>
+
+<!-- MODAL VIDEO -->
+<div class="modal-overlay" id="modal-video">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-video-title">
+    <button class="modal-close" onclick="closeModal('modal-video')" aria-label="Cerrar modal video">&times;</button>
+    <h3 id="modal-video-title">Demostración en Video</h3>
+    <div class="video-container">
+      <video controls>
+        <source src="Uso.mp4" type="video/mp4" />
+        Tu navegador no soporta la etiqueta video.
+      </video>
+    </div>
+  </div>
+</div>
+
+
+    <!-- SECCIÓN: PRECAUCIONES -->
+    <section class="section" id="precauciones">
+      <h2>Precauciones</h2>
+      <div class="content-placeholder">
+        <p>Evitar contacto con los ojos. No aplicar sobre piel irritada o con heridas. Mantener fuera del alcance de niños.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: DETALLES DE INGREDIENTES CON MODALES -->
+    <section class="section" id="detalles">
+      <h2>Detalles de Ingredientes</h2>
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="card-icon" aria-hidden="true">🥥</div>
+          <h3>Aceite de Coco</h3>
+          <button class="about-btn" onclick="openIngredientModal('modal-coco')" aria-haspopup="dialog" aria-controls="modal-coco">Mostrar más</button>
+        </div>
+        <div class="detail-card">
+          <div class="card-icon" aria-hidden="true">🍯</div>
+          <h3>Azúcar</h3>
+          <button class="about-btn" onclick="openIngredientModal('modal-azucar')" aria-haspopup="dialog" aria-controls="modal-azucar">Mostrar más</button>
+        </div>
+        <div class="detail-card">
+          <div class="card-icon" aria-hidden="true">🧴</div>
+          <h3>Crema</h3>
+          <button class="about-btn" onclick="openIngredientModal('modal-crema')" aria-haspopup="dialog" aria-controls="modal-crema">Mostrar más</button>
+        </div>
+        <div class="detail-card">
+          <div class="card-icon" aria-hidden="true">🧼</div>
+          <h3>Jabón</h3>
+          <button class="about-btn" onclick="openIngredientModal('modal-jabon')" aria-haspopup="dialog" aria-controls="modal-jabon">Mostrar más</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Proyecto Coco Bliss</p>
+    <p><small>&copy; 2025 Universidad Tecnológica Metropolitana - UTM</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
