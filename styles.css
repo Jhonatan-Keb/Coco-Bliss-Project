@@ -506,7 +506,7 @@ input:checked + .slider:before {
 /* ===================================
    MEDIA QUERIES - RESPONSIVE DESIGN
    =================================== */
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .header {
     padding: 0 15px;
   }
@@ -541,9 +541,13 @@ input:checked + .slider:before {
   .ingredients-list {
     grid-template-columns: 1fr;
   }
+  .video-container video {
+  width: 100%;
+  max-width: 90vw;
+}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
   .main-content {
     margin-top: 65px;
     padding: 10px;
@@ -569,6 +573,11 @@ input:checked + .slider:before {
   .card-icon {
     font-size: 36px;
   }
+
+  .video-container video {
+  width: 100%;
+  max-width: 90vw;
+}
 }
 
 @media (min-width: 1200px) {
@@ -599,4 +608,37 @@ input:checked + .slider:before {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+}
+
+/* ===================================
+   VIDEO RESPONSIVO
+   =================================== */
+.video-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .video-container video {
+    max-height: 60vh;
+  }
 }
